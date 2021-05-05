@@ -31,7 +31,7 @@ function App() {
         <input
           className="app__input"
           type="text"
-          placeholder="enter ingridient"
+          placeholder="enter ingredient"
           autoComplete="Off"
           value={query}
           onChange={(e) => setquery(e.target.value)}
