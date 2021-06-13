@@ -14,7 +14,7 @@ function App() {
 
   const getRecipeInfo = async () => {    var result = await Axios.get(url);
     setrecipes(result.data.hits);
-    console.log(result.data.hits);
+    // console.log(result.data);
   };
 
   const onSubmit = (e) => {
@@ -25,8 +25,18 @@ function App() {
   return (
     <div className="app">
       
-      <div className="ss">
-      <h1 onClick={getRecipeInfo}>Food Recipe Book</h1>
+      <div className="ss"style={{
+        display:'flex', 
+        alignItems:'center',
+        justifyContent:'center', 
+        paddingRight:'20vw',
+        paddingLeft:'20vw'
+      }}>
+      <h1 onClick={getRecipeInfo} style={{
+        marginRight:'10vh',
+        fontSize:50,
+        fontWeight:100
+      }}>Food Recipe Book</h1>
       <form className="app__searchForm" onSubmit={onSubmit}>
         <input
           className="app__input"
@@ -35,6 +45,9 @@ function App() {
           autoComplete="Off"
           value={query}
           onChange={(e) => setquery(e.target.value)}
+          style={{
+            width:'50vh'
+          }}
         />
         <input className="app__submit" type="submit" value="Search" />
       </form>

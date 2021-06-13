@@ -1,21 +1,21 @@
 .recipeTile {
-  
   margin: 10px 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   cursor: pointer;
   background-color: white;
-  height: 300px;
+  height: 320px;
   border: rgb(0, 28, 88) double 5px;
   border-radius: 10px;
+  
 }
 .recipeTile:hover
 {
   background-color: rgb(74, 153, 221);
 }
   .recipeTile__img {
-    height: 250px;
+    height: 225px;
     width: 200px;
     object-fit: fill;
   }
