@@ -7,14 +7,14 @@ function App() {
   const [query, setquery] = useState("");
   const [recipes, setrecipes] = useState([]);
 
-  const YOUR_APP_ID = `b63a836a`;
-  const YOUR_APP_KEY = "3b8188c725e30ad12e6442e04d8e654d";
+  const APP_ID = `b63a836a`;
+  const APP_KEY = "3b8188c725e30ad12e6442e04d8e654d";
 
-  const url = `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`;
+  const url = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
   const getRecipeInfo = async () => {    var result = await Axios.get(url);
     setrecipes(result.data.hits);
-    // console.log(result.data);
+     //console.log(result.data);
   };
 
   const onSubmit = (e) => {
@@ -41,7 +41,7 @@ function App() {
         <input
           className="app__input"
           type="text"
-          placeholder="enter ingredient"
+          placeholder="Search for Recipe"
           autoComplete="Off"
           value={query}
           onChange={(e) => setquery(e.target.value)}
